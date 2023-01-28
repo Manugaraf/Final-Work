@@ -9,12 +9,24 @@ for (int i = 0; i < n; i++)
 }
 
 Console.WriteLine();
+string[] arrayTwo = new string[n];
+int m = 3;
+int sum = 0;
 for (int j = 0; j < n; j++)
 {
-    int m = 3;
     int element = array[j].Length;
     if (element <= m)
     {
-        Console.Write($"{array[j]} ");
+        arrayTwo[sum] = array[j];
+        sum++;
     } 
 }
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+PrintArray(arrayTwo);
